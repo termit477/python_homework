@@ -10,7 +10,7 @@ for i in range(-n, n + 1):
     mass.append(i)
 print(mass)
 
-position = open('file.txt', 'r')
+position = open('task_2.4.read.txt', 'r')
 for line in position:
     pos.append(int(line))
 position.close()

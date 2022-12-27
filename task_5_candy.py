@@ -7,11 +7,7 @@
 from os import system
 system("cls")
 
-from task_5_func import Input_candy
-from task_5_func import Input_name_first_player
-from task_5_func import Input_name_second_players
-from task_5_func import Play_with_other_player
-from task_5_func import Play_with_computer
+from task_5_func import *
 
 
 game = input('с кем будете играть? \n "1" - с ботом, "2" - с другим игроком: ')

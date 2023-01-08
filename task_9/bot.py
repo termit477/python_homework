@@ -109,26 +109,4 @@ def course(message):
         bot.send_message(message.chat.id, f'1 € = {eur} ₽')
 
 
-    # result = requests.get('https://www.cbr-xml-daily.ru/daily_json.js').json()
-    # bot.send_message(message.chat.id, result['Valute']['USD']['Name'], result['Valute']['USD']['Value'])
-
-
-#  РЕГИСТРАЦИЯ НИКА
-
-# # @bot.message_handler(commands=['reg'])
-# # def message_text(message):
-# #     bot.send_message(message.chat.id, 'Пройдите регистрацию в боте')
-
-# bd = []
-# @bot.message_handler(content_types=['text'])
-# def reg_hooli_text(message):
-#     if message.text not in bd:
-#         with open('bd_bot.json', 'w', encoding='utf-8') as file:
-#             json.dump(bd, file, indent=4, ensure_ascii=False)
-#         bot.send_message(message.chat.id, 'Вы зарегестрированны!')
-#         bd.append(message.text)
-#     if message.text in bd:
-#         bot.send_message(message.chat.id, 'увы но такой ник уже есть')
-
-
 bot.infinity_polling(none_stop=True, interval=0)

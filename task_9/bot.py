@@ -45,7 +45,7 @@ def send_welcome(message):
 def game(message):
     global candy, status, whos_move
     bot.send_message(message.chat.id,
-                'Привет, человечишка. \nСыграем в игру :)')
+                    'Привет, человечишка. \nСыграем в игру :)')
     candy[message.chat.id] = 117
     whos_move[message.chat.id] = choice(['User', 'Bot'])
     bot.send_message(message.chat.id, 
@@ -54,8 +54,8 @@ def game(message):
     if whos_move[message.chat.id] == 'Bot':
         take = rnd(1, 28)
         candy[message.chat.id] -= take
-        bot.send_message(message.chat.id, \
-            f'Бот взял {take}\nОсталось конфет {candy[message.chat.id]}')
+        bot.send_message(message.chat.id,
+                        f'Бот взял {take}\nОсталось конфет {candy[message.chat.id]}')
         whos_move[message.chat.id] = 'User'
 
 

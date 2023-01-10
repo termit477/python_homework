@@ -45,7 +45,13 @@ def send_welcome(message):
 def game(message):
     global candy, status, whos_move
     bot.send_message(message.chat.id,
-                    'Привет, человечишка. \nСыграем в игру :)')
+                    'Привет, человечишка. '
+                    '\nСыграем в игру :)'
+                    '\nНа столе лежит 117 конфет.'
+                    '\nВы будете играть против бота, делая ход друг за другом.'
+                    '\nПервый ход определяется жеребьёвкой. '
+                    '\nЗа один ход можно забрать не более чем 28 конфет.'
+                    '\nВсе конфеты оппонента достаются сделавшему последний ход.')
     candy[message.chat.id] = 117
     whos_move[message.chat.id] = choice(['User', 'Bot'])
     bot.send_message(message.chat.id, 

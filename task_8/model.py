@@ -31,11 +31,8 @@ def edit_person(base, find_item, new_info):
             break
     new_person = person.split(' | ')
     new_person[new_info[0]] = new_info[1]
-    print(new_person)
     new_person = ' | '.join(new_person)
-    print(new_person)
     base[index-1] = new_person
-    print(base)
     return base
 
 
